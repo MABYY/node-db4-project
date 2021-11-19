@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "server": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "up": "knex migrate:up",
+    "down": "knex migrate:down",
+    "latest": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "mignumber": "knex migrate:currentVersion",
+    "seed": "knex seed:run"
   },
   "repository": {
     "type": "git",
@@ -18,6 +24,8 @@
     "dotenv": "^10.0.0",
     "env": "^0.0.2",
     "express": "^4.17.1",
-    "helmet": "^4.6.0"
+    "helmet": "^4.6.0",
+    "knex": "^0.95.14",
+    "sqlite3": "^5.0.2"
   }
 }

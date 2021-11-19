@@ -1,9 +1,9 @@
-// const db = require("../data/db-config")
+const db = require("../data/db-config")
 
-// function findAll () {
-//     return db("recipies")
-// }
+function findAll () {
+    return db("recipies")
+}
 
-// module.exports = {
-//     findAll
-// }
+module.exports = {
+    findAll
+}
