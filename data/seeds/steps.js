@@ -4,12 +4,17 @@ exports.seed = function(knex,Promise) {
       .then(function () {
         // Inserts seed entries
         return knex('steps').insert([
-          {step_instructions: 'Put a large saucepan on a medium heat', ingredient_id: ""},
-          {step_instructions: 'Add 1 tbsp olive oil', ingredient_id: "olive oil"},
-          {step_instructions: 'Put a large saucepan on a medium heat', ingredient_id: ""},
-          {step_instructions: 'Mix eggs and ham', ingredient_id: "Mixer"},
+            // Spaghetti Bolognese
+          {step_instructions: 'Put a large saucepan on a medium heat', step_number: 1,recipe_id:1},
+          {step_instructions: 'Add 1 tbsp olive oil', step_number: 2,recipe_id:1},
+
+          //   // Meat balls
+          {step_instructions: 'Put a large saucepan on a medium heat', step_number: 1,recipe_id:2},
+          {step_instructions: 'Mix eggs and ham', step_number: 2,recipe_id:2}
+
 
         ]);
       });
   };
-  
+
+

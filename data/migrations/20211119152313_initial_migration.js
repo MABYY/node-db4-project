@@ -15,13 +15,13 @@ exports.up = function(knex) {
 
     .createTable('steps', tbl => {
         tbl.increments("step_id")
-        tbl.string("step_instructions",256).unique().notNullable()
-        tbl.integer('step_number')
-        tbl.integer('recipie_id')
+        tbl.text("step_instructions",256).notNullable()
+        tbl.integer('step_number').notNullable()
+        tbl.integer('recipe_id')
             .unsigned()   // not negative
             .notNullable() // Maybe the step does not require an ingredient
-            .references('recipie_id')
-            .inTable('recipies')
+            .references('recipe_id')
+            .inTable('recipes')
             .onDelete('RESTRICT')
             .onUpdate('RESTRICT') // Changes of promary keys rarely happens
     })
@@ -39,7 +39,7 @@ exports.up = function(knex) {
         tbl.integer('ingredient_id')
             .unsigned()   
             .notNullable() 
-            .references('ingrediet_id')
+            .references('ingredient_id')
             .inTable('ingredients')
             .onDelete('RESTRICT')
             .onUpdate('RESTRICT') 
