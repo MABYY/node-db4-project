@@ -14,18 +14,18 @@ router.get("/", async (req, res,next) => {
     }
 })
 
-// router.get("/:id", async (req, res,next) => {
-//     try{
+router.get("/:id", async (req, res,next) => {
+    try{
 
-//         console.log("Get recipie by is working")
-//         // const { recipe_id } = req.params.id
-//         // const recipie = getRecipeById(recipe_id)
-//         // res.status(200).json(recipie)
+        console.log("Get recipie by is working")
+        // const { recipe_id } = req.params.id
+        // const recipie = getRecipeById(recipe_id)
+        // res.status(200).json(recipie)
 
-//     } catch (next){
+    } catch (next){
 
-//     }
-// })
+    }
+})
 
 router.use( (err,req,res,next) => {
     res.status( err.status || 500).json({
